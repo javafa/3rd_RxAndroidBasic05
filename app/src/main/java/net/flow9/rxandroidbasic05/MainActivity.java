@@ -25,9 +25,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    // 얘는 머하는 애
+    // 구독 시점부터 발행 데이터를 읽어볼 수 있다
     PublishSubject<String> publishSubject = PublishSubject.create();
-    // 너는 머냐...
     public void doPublish(View view){
         new Thread() {
             public void run() {
@@ -48,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
         );
     }
     //------------------------------------------------------
+    // 가장 마지막 발행한 것부터 구독할 수 있다
     BehaviorSubject<String> behaviorSubject = BehaviorSubject.create();
-    // 발행
     public void doBehavior(View view){
         new Thread() {
             public void run() {
@@ -67,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         );
     }
     //------------------------------------------------------
+    // 처음 발행한 것 부터 읽을 수 있다
     ReplaySubject<String> replaySubject = ReplaySubject.create();
     public void doReplay(View view){
         new Thread() {
@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         );
     }
     //------------------------------------------------------
+    // 완료된 시점에서 가장 마지막 데이터만 읽을 수 있다
     AsyncSubject<String> asyncSubject = AsyncSubject.create();
     public void doAsync(View view){
         new Thread() {

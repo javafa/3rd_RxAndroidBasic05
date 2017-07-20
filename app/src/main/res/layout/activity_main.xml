@@ -23,46 +23,40 @@
         android:id="@+id/btnBehavior"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="148dp"
-        android:layout_marginStart="148dp"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="21dp"
         android:onClick="doBehavior"
         android:text="Behavior"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPublish"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="77dp" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@+id/button7" />
 
     <Button
         android:id="@+id/btnReplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="149dp"
-        android:layout_marginStart="147dp"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="23dp"
         android:onClick="doReplay"
         android:text="replay"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnBehavior"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="148dp" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@+id/button8" />
 
     <Button
         android:id="@+id/btnAsync"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="148dp"
-        android:layout_marginStart="148dp"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="20dp"
         android:onClick="doAsync"
         android:text="async"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnReplay"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="216dp" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@+id/button9" />
 
     <Button
         android:id="@+id/button6"
@@ -77,5 +71,44 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnPublish"
         app:layout_constraintTop_toTopOf="@+id/btnPublish" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="getBehavior"
+        android:text="subscriber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnBehavior"
+        app:layout_constraintTop_toTopOf="@+id/btnBehavior" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="getReplay"
+        android:text="subscribe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnReplay"
+        app:layout_constraintTop_toTopOf="@+id/btnReplay" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="getAsync"
+        android:text="subscribe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnAsync"
+        app:layout_constraintTop_toTopOf="@+id/btnAsync" />
 
 </android.support.constraint.ConstraintLayout>
